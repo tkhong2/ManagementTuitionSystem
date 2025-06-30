@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Trang sinh viên";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+    var fullName = Context.Session.GetString("FullName") ?? "Sinh viên";
+
+}
+
+<div class="container">
+    <div class="text-center mt-4 mb-5">
+        <h1>Xin chào, @fullName!</h1>
+        <p class="lead">Chào mừng bạn đến với cổng thông tin sinh viên. Tại đây, bạn có thể theo dõi học phí, lịch sử thanh toán và các thông báo từ nhà trường.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">📚 Môn học</h5>
+                    <p class="card-text">Xem danh sách môn học đã đăng ký và kết quả học tập.</p>
+                    <a href="/Student/CourseStudent" class="btn btn-light btn-sm">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">💵 Học phí</h5>
+                    <p class="card-text">Tra cứu và thanh toán học phí theo từng học kỳ.</p>
+                    <a href="/Student/Payment" class="btn btn-light btn-sm">Thanh toán</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">🕑 Lịch sử giao dịch</h5>
+                    <p class="card-text">Xem lại các lần thanh toán học phí và in biên lai.</p>
+                    <a href="" class="btn btn-light btn-sm">Xem lịch sử</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">📢 Thông báo</h5>
+                    <p class="card-text">Cập nhật các thông báo mới từ phòng đào tạo.</p>
+                    <a href="" class="btn btn-light btn-sm">Xem thông báo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="alert alert-info text-center">
+        💬 <strong>Lưu ý:</strong> Hãy kiểm tra kỹ thông tin trước khi thực hiện thanh toán. Mọi thắc mắc vui lòng liên hệ phòng Tài vụ.
+    </div>
+</div>
